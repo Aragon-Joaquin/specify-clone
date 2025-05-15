@@ -8,77 +8,145 @@
 		<link rel="stylesheet" href="./css/index.css" />
 	</head>
 	<body>
+		<div class="activate-browser" aria-hidden>
+			Please use the browser to see this content.<br />
+			This website uses CSS nesting
+		</div>
 		<!--! HEADER -->
-		<header>
-			<img src="./assets/img/logo.svg" alt="Specify Logo" />
+		<header class="index-header">
+			<nav class="header-nav">
+				<img src="./assets/img/logo.svg" alt="Specify Logo" class="logo" />
 
-			<nav>
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li>
+						<a href="index.html">Home</a>
+						<svg
+							focusable="false"
+							viewBox="0 0 24 24"
+							color="rgba(255, 255, 255, 0.5)"
+							style="user-select: none; display: inline-block; flex-shrink: 0"
+						>
+							<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+						</svg>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+						<svg
+							focusable="false"
+							viewBox="0 0 24 24"
+							color="rgba(255, 255, 255, 0.5)"
+							style="user-select: none; display: inline-block; flex-shrink: 0"
+						>
+							<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+						</svg>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+						<svg
+							focusable="false"
+							viewBox="0 0 24 24"
+							color="rgba(255, 255, 255, 0.5)"
+							style="user-select: none; display: inline-block; flex-shrink: 0"
+						>
+							<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+						</svg>
+					</li>
 				</ul>
 
-				<button class="sign-in">Sign in</button>
+				<a class="primary-button">Sign in</a>
 			</nav>
 		</header>
 
 		<!--! MAIN -->
 		<main>
-			<section>
+			<section class="main-title">
 				<h1>Your Design Token Engine</h1>
 				<p>
 					Flexible and powerful, Specify makes it easy to build the exact <br />
 					Design Token workflow your Design System needs.
 				</p>
-				<video loop autoplay muted playsinline src="./assets/video/landing2.mp4" poster="not-yet :c"></video>
-			</section>
 
-			<section>
-				<span>Specify is loved by</span>
-				<div class="icon-carrousel">
-					<img src="logo1" alt="" />
-					<img src="logo2" alt="" />
-					<img src="logo3" alt="" />
-					<img src="logo4" alt="" />
-					<img src="logo5" alt="" />
+				<div class="video-container">
+					<video
+						id="video"
+						autoplay
+						muted
+						playsinline
+						src="./assets/video/landingStart.webm"
+						poster="./assets/img/landing.webp"
+					></video>
+					<div class="blurred-borders"></div>
 				</div>
 			</section>
 
-			<section>
-				<h3>Taking design tokens to the next level</h3>
-				<p>Specify helps you gain control of your design system across teams and products</p>
-				<button>Read vision</button>
+			<section class="main-sponsors">
+				<span class="loved-by">Specify is loved by</span>
+
+				<div class="icon-carrousel">
+					<!-- not all sponsors but you get the idea -->
+					<div class="sponsors">
+						<img src="./assets/img/sponsors/sponsor1.svg" alt="Autodoc" />
+						<img src="./assets/img/sponsors/sponsor2.svg" alt="Dana" />
+						<img src="./assets/img/sponsors/sponsor3.svg" alt="Basket" />
+						<img src="./assets/img/sponsors/sponsor4.svg" alt="Pelo Studio" />
+						<img src="./assets/img/sponsors/sponsor5.svg" alt="Make Music" />
+						<img src="./assets/img/sponsors/sponsor6.svg" alt="In The Pocket" />
+						<img src="./assets/img/sponsors/sponsor7.svg" alt="Comcat Business" />
+					</div>
+
+					<!-- makes the loops seem alright -->
+					<div aria-hidden class="sponsors">
+						<img src="./assets/img/sponsors/sponsor1.svg" alt="Autodoc" />
+						<img src="./assets/img/sponsors/sponsor2.svg" alt="Dana" />
+						<img src="./assets/img/sponsors/sponsor3.svg" alt="Basket" />
+						<img src="./assets/img/sponsors/sponsor4.svg" alt="Pelo Studio" />
+						<img src="./assets/img/sponsors/sponsor5.svg" alt="Make Music" />
+						<img src="./assets/img/sponsors/sponsor6.svg" alt="In The Pocket" />
+						<img src="./assets/img/sponsors/sponsor7.svg" alt="Comcat Business" />
+					</div>
+				</div>
+			</section>
+
+			<section class="main-information">
+				<span class="title-information">
+					<h3>Taking design tokens to the next level</h3>
+					<p>Specify helps you gain control of your design system across teams and products</p>
+					<button class="primary-button">Read vision</button>
+				</span>
 
 				<div class="information">
-					<div>
+					<div class="info-card">
 						<span> Unified Design Language </span>
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse tempore porro commodi, blanditiis, nesciunt
-							ea corporis cupiditate minus incidunt, eveniet nihil sed praesentium impedit. Nostrum, quod? Deleniti
-							cumque consequuntur, alias deserunt ipsam harum maiores vitae atque dolorem nam enim ipsa eum amet ex sed
-							eaque totam aspernatur, fuga tempore iure?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora quaerat quo sit ab esse aliquam,
+							necessitatibus debitis ad dolore.
 						</p>
 					</div>
 
-					<div>
+					<div class="info-card">
 						<span> Effortless collaboration </span>
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse tempore porro commodi, blanditiis, nesciunt
-							ea corporis cupiditate minus incidunt, eveniet nihil sed praesentium impedit. Nostrum, quod? Deleniti
-							cumque consequuntur, alias deserunt ipsam harum maiores vitae atque dolorem nam enim ipsa eum amet ex sed
-							eaque totam aspernatur, fuga tempore iure?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora quaerat quo sit ab esse aliquam,
+							necessitatibus debitis ad dolore.
 						</p>
 					</div>
-					<div>
+
+					<div class="info-card">
 						<span> Customizable workflows </span>
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse tempore porro commodi, blanditiis, nesciunt
-							ea corporis cupiditate minus incidunt, eveniet nihil sed praesentium impedit. Nostrum, quod? Deleniti
-							cumque consequuntur, alias deserunt ipsam harum maiores vitae atque dolorem nam enim ipsa eum amet ex sed
-							eaque totam aspernatur, fuga tempore iure?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora quaerat quo sit ab esse aliquam,
+							necessitatibus debitis ad dolore.
 						</p>
 					</div>
+
+					<video
+						autoplay
+						muted
+						loop
+						playsinline
+						src="./assets/video/1+-Figma.mp4"
+						poster="./assets/img/landing.webp"
+					></video>
 				</div>
 			</section>
 
@@ -178,4 +246,19 @@
 			<p>©2024 Specify · All rights reserved.</p>
 		</footer>
 	</body>
+
+	<script type="text/javascript">
+		let video = document.getElementById('video')
+
+		video.addEventListener(
+			'ended',
+			(element) => {
+				video.removeAttribute('poster')
+				video.src = './assets/video/landingLoop.webm'
+				video.play()
+				video.loop = true
+			},
+			{ once: true }
+		)
+	</script>
 </html>

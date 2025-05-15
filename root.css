@@ -1,16 +1,105 @@
+@import url('./css/styles-reset.css');
+
+@font-face {
+	font-family: 'Inter-Regular';
+	src: url('./assets/fonts/InterRegular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Inter-Medium';
+	src: url('./assets/fonts/InterMedium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Inter-SemiBold';
+	src: url('./assets/fonts/InterSemiBold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Inter-Bold';
+	src: url('./assets/fonts/InterBold.woff2') format('woff2');
+}
+
 :root {
-	--black: #1a1a1a;
+	--black: #151718;
 	--white: #f5f5f5;
+	--purple: #8673fd;
+
+	--text-description: #ffffffcc;
+
+	--font-inter-regular: 'Inter-Regular', 'Inter', sans-serif;
+	--font-inter-medium: 'Inter-Medium', 'Inter', sans-serif;
+	--font-inter-semibold: 'Inter-SemiBold', 'Inter', sans-serif;
+	--font-inter-bold: 'Inter-Bold', 'Inter', 'Inter Placeholder', sans-serif;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: var(--font-inter-regular);
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
+	display: flex;
+	overflow-x: hidden;
+	flex-direction: column;
+	position: relative;
+
 	background-color: var(--black);
 	color: var(--white);
+	margin: 0 3%;
+	max-width: 1200px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	& main {
+		flex-grow: 1;
+	}
+}
+
+.activate-browser {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	background: var(--black);
+	color: var(--white);
+
+	& {
+		display: none !important;
+	}
+}
+
+.logo {
+	height: 24px;
+	position: relative;
+	width: 82px;
+}
+
+.primary-button {
+	outline: none;
+	font-size: 16px;
+	font-family: var(--font-inter-medium);
+	font-weight: 500;
+
+	border-radius: 5px;
+	border: 1px solid #f5f5f52f;
+	padding: 4px 16px;
+	color: #fff;
+	background-color: var(--black);
+
+	border-top: 1px solid #f5f5f560;
+	border-bottom: 1px solid #f5f5f51f;
+
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		cursor: pointer;
+		background-color: #f5f5f52f;
+	}
 }
