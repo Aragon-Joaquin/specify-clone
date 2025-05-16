@@ -139,7 +139,7 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	gap: 20px 0px;
+	gap: 20px 20px;
 	flex-direction: column;
 
 	margin: 0px 0px 200px 0px;
@@ -151,15 +151,8 @@
 	}
 
 	& > .icon-carrousel {
-		margin: 0 -10%;
-		position: relative;
-		width: 100vw;
-		overflow: hidden;
-		display: flex;
-
-		& > * {
-			flex: 0 0 100%;
-		}
+		white-space: nowrap;
+		animation: scrolling 30s linear infinite;
 
 		&:hover > * {
 			animation-play-state: paused;
@@ -168,13 +161,17 @@
 }
 
 .sponsors {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
+	width: max-content;
+	display: inline-block;
+	white-space: nowrap;
 	will-change: transform;
-	animation: scrolling 30s linear infinite;
+
+	&:last-child {
+		left: 100%;
+	}
 
 	& > img {
+		display: inline-block;
 		aspect-ratio: auto;
 		fill: var(--white);
 		object-fit: cover;
