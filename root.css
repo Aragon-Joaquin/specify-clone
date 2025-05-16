@@ -23,7 +23,13 @@
 :root {
 	--black: #151718;
 	--white: #f5f5f5;
-	--purple: #8673fd;
+
+	--purple: rgb(134, 115, 253);
+
+	/*! testing something */
+	--dark-purple: 141, 74, 247;
+	--green: 0, 150, 57;
+	--blue: 29, 88, 192;
 
 	--text-description: #ffffffcc;
 
@@ -101,5 +107,24 @@ body {
 	&:hover {
 		cursor: pointer;
 		background-color: #f5f5f52f;
+	}
+}
+
+.secondary-button {
+	outline: none;
+	font-size: 16px;
+	font-family: var(--font-inter-semibold);
+
+	border-radius: 20px;
+	border: 1px solid #f5f5f52f;
+	padding: 8px 50px;
+	color: var(--black);
+	background: var(--white);
+
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		cursor: pointer;
+		color: var(--white);
+		background: var(--black);
 	}
 }
