@@ -203,7 +203,7 @@
 	scroll-behavior: smooth;
 	scrollbar-color: #999 #333;
 	white-space: nowrap;
-	scroll-snap-type: x mandatory;
+	scroll-snap-type: x proximity;
 
 	&:hover {
 		cursor: pointer;
