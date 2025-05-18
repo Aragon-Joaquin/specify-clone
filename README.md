@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> Use a web browser based on **Chromium** for the full experience. Others like **Firefox** or **Safari** don't support all of the css properties used.
+> Use a web browser based on **Chromium** for the full experience. Others like **Firefox** or **Safari** don't support all of the css properties used
 
 # Specify Clone
 
