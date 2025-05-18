@@ -642,3 +642,217 @@ tr:nth-child(3) .preview::after {
 		rotate: 360deg;
 	}
 }
+
+@media screen and (max-width: 568px) {
+	.bento-card {
+		height: 400px !important;
+	}
+	.design-props {
+		inset: 0;
+		transform: translate(0%, 30%);
+
+		& > * {
+			scale: 0.8;
+		}
+
+		& > .colors {
+			transform: translate(60%, 15%) !important;
+		}
+
+		& > .buttons {
+			transform: translate(200%, 25%) !important;
+		}
+
+		& > .select-thing {
+			transform: translate(150%, 100%) !important;
+		}
+
+		& > .more-buttons {
+			transform: translate(75%, 325%) !important;
+		}
+		& > .more-buttons > button {
+			width: 100px;
+			padding: 5px 10px;
+		}
+	}
+
+	.crypto-idk {
+		top: 10% !important;
+		transform: translate(10%, 10%) !important;
+	}
+
+	.code {
+		padding: 0 !important;
+	}
+
+	.tokens-img {
+		top: 10% !important;
+		scale: 1.2 !important;
+	}
+
+	.blur-effect {
+		display: none !important;
+	}
+
+	.token-1,
+	.token-2 {
+		transform: translate(0, 35%) !important;
+
+		pointer-events: none !important;
+	}
+
+	.materials {
+		height: 100%;
+		overflow: hidden;
+
+		& > .showoff-buttons {
+			gap: 10px;
+			&::before,
+			&::after {
+				width: 100px;
+			}
+			&::before {
+				left: 0;
+			}
+			&::after {
+				left: calc(100% - 100px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.services-title {
+		& > h1 {
+			font-size: 2.5em !important;
+		}
+	}
+
+	.card-section {
+		min-width: 0;
+		min-height: 0;
+		width: 100% !important;
+		height: 550px !important;
+		max-width: 550px;
+		background: linear-gradient(180deg, var(--color1) 0%, var(--color2) 100%) !important;
+		flex-direction: column !important;
+
+		& .card-info {
+			width: 100% !important;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+		}
+
+		& .img-container {
+			& > img {
+				width: 100% !important;
+				height: auto !important;
+				top: -5% !important;
+			}
+		}
+	}
+
+	.bento-grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		& > .bento-card {
+			display: flex;
+			align-items: center;
+			min-width: 360px;
+			max-width: 700px;
+			flex-basis: 45%;
+
+			& > h5 {
+				font-size: 1.5em;
+			}
+			& > p {
+				font-size: 0.9em !important;
+			}
+
+			height: 350px;
+			width: 75%;
+			margin: auto;
+			padding-bottom: 0;
+
+			& > h5 {
+				text-align: center;
+			}
+		}
+	}
+
+	.design-props {
+		scale: 0.9;
+		left: -30%;
+		top: -15%;
+		& > .colors {
+			transform: translate(100%, 30%);
+		}
+
+		& > .buttons {
+			width: fit-content;
+			transform: translate(275%, 25%);
+
+			& > .primary-button,
+			& > .secondary-button {
+				width: 100px;
+				padding: 10px 10px;
+			}
+		}
+
+		& > .select-thing {
+			transform: translate(200%, 200%);
+			width: 200px;
+		}
+
+		& > .more-buttons {
+			transform: translate(100%, 325%);
+			width: 300px;
+			height: 50px;
+			gap: 5px;
+			padding: 5px;
+		}
+		& > .more-buttons > button {
+			width: 100px;
+			padding: 5px 10px;
+		}
+	}
+
+	.crypto-idk {
+		inset: 0;
+		transform: translate(18%, 10%);
+	}
+
+	.tokens-img {
+		position: relative;
+		scale: 1.1;
+	}
+
+	.token-1,
+	.token-2 {
+		scale: 0.8;
+		transform: translate(0, 40%);
+	}
+
+	.materials {
+		height: 100%;
+		overflow: hidden;
+
+		& > .showoff-buttons {
+			gap: 10px;
+			&::before,
+			&::after {
+				width: 100px;
+			}
+			&::before {
+				left: 0;
+			}
+			&::after {
+				left: calc(100% - 100px);
+			}
+		}
+	}
+}
