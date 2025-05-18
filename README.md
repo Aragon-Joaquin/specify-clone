@@ -1,3 +1,6 @@
+> [!NOTE]  
+> **_DONE IN 4 DAYS!!!_**
+
 # Specify Clone
 
 I tried to clone **[SpecifyApp](https://specifyapp.com/)** for a university project with **good practices and SEO** (performance is kinda bad since the screenshot was took using the live server extension that injects javascript into the client).
