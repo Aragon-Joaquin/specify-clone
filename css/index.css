@@ -211,16 +211,11 @@
 	overflow-x: scroll !important;
 
 	box-shadow: 40px 0 20px -4px var(--black) inset, -40px 0 20px -4px var(--black) inset;
-	z-index: 10;
+
 	scroll-behavior: smooth;
 	scrollbar-color: #999 #333;
 	white-space: nowrap;
 	scroll-snap-type: x proximity;
-
-	&:hover {
-		cursor: pointer;
-		animation-play-state: paused;
-	}
 
 	& > .apps-card {
 		position: relative;
