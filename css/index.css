@@ -6,6 +6,7 @@
 
 .main-title {
 	display: flex;
+	text-align: center;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -33,6 +34,10 @@
 		width: 100%;
 		height: auto;
 		aspect-ratio: auto;
+
+		& img {
+			display: none;
+		}
 
 		& video {
 			width: 100%;
@@ -74,7 +79,7 @@
 		white-space: nowrap;
 		animation: scrolling 30s linear infinite;
 
-		&:hover > * {
+		&:hover {
 			animation-play-state: paused;
 		}
 	}
@@ -196,7 +201,7 @@
 	margin-top: 150px;
 	padding: 0px 50px 15px;
 	gap: 60px;
-	overflow-x: scroll;
+	overflow-x: scroll !important;
 
 	box-shadow: 40px 0 20px -4px var(--black) inset, -40px 0 20px -4px var(--black) inset;
 	z-index: 10;
@@ -211,6 +216,7 @@
 	}
 
 	& > .apps-card {
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		width: 800px;
@@ -223,7 +229,6 @@
 		& > .integrated-aside {
 			padding: 40px;
 			height: 400px;
-			position: relative;
 			border: 1.5px solid #f5f5f52d;
 		}
 
@@ -328,5 +333,155 @@
 	}
 	100% {
 		transform: translateX(-100%);
+	}
+}
+
+/* !! MEDIA QUERIES */
+
+@media screen and (max-width: 568px) {
+	.main-title {
+		& .video-container {
+			box-shadow: none;
+			& img {
+				padding: 20px;
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 20px;
+			}
+			& video {
+				display: none;
+			}
+
+			& .blurred-borders {
+				display: none;
+			}
+		}
+	}
+
+	.apps-card {
+		min-width: 300px !important;
+		& > .about-him {
+			width: 300px !important;
+			padding: 40px 20px !important;
+
+			& > div {
+				width: 100%;
+				padding: 0;
+				text-align: center;
+				text-wrap: nowrap;
+			}
+		}
+	}
+	.title-information {
+		gap: 20px !important;
+		& > h3 {
+			width: 100% !important;
+		}
+	}
+
+	@keyframes scrolling {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-80%);
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.main-title {
+		& .video-container {
+			box-shadow: none;
+			& img {
+				padding: 20px;
+				display: block;
+				margin: auto;
+				width: 500px;
+				height: auto;
+				border-radius: 20px;
+			}
+			& video {
+				display: none;
+			}
+
+			& .blurred-borders {
+				display: none;
+			}
+		}
+	}
+
+	.main-sponsors {
+		margin: 0px 0px 100px 0px;
+	}
+	.icon-carrousel {
+		scale: 0.9;
+		width: fit-content;
+		display: inline-block;
+		animation-duration: 10s !important;
+		animation-direction: alternate !important;
+
+		& > .sponsors:nth-child(2) {
+			display: none;
+		}
+
+		& .loved-by {
+			text-align: center;
+		}
+	}
+
+	.information {
+		padding: 0 20px !important;
+		display: flex !important;
+		gap: 30px !important;
+		flex-direction: column !important;
+
+		& > video {
+			width: 100% !important;
+			height: auto;
+		}
+	}
+
+	.carrousel {
+		margin-top: 50px;
+		overflow-x: hidden;
+
+		& > .apps-card {
+			min-width: 350px;
+			border-radius: 16px;
+			height: 600px !important;
+			flex-direction: column !important;
+
+			border: 1px solid #f5f5f52d;
+
+			& > .integrated-aside {
+				border-radius: 16px;
+				border-left-width: 0px;
+				border-top-width: 0px;
+				width: 100%;
+				& > .integrated-separator {
+					display: none;
+				}
+			}
+
+			& > .about-him {
+				border-left-width: 1px !important;
+				width: 350px;
+				height: 400px;
+				text-align: center;
+				flex-direction: column-reverse !important;
+				border: 0;
+			}
+		}
+	}
+
+	@keyframes scrolling {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-60%);
+		}
 	}
 }
