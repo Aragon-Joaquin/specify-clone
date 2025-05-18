@@ -69,14 +69,27 @@
 
 				<div class="video-container">
 					<img src="./assets/img/index/phone-fallback.avif" alt="Video demostration" />
-					<video
-						id="video"
-						autoplay
-						muted
-						playsinline
-						src="./assets/video/landingStart.webm"
-						poster="./assets/img/index/landing.webp"
-					></video>
+					
+					<div class="cool-transition">
+						<video
+							id="video1"
+							autoplay
+							muted
+							playsinline
+							src="./assets/video/landingStart.webm"
+							poster="./assets/img/index/landing.webp"
+						></video>
+
+						<video
+							aria-hidden
+							id="video2"
+							muted
+							playsinline
+							class="invisible"
+							src="./assets/video/landingLoop.webm"
+						></video>
+
+					</div>
 					<div class="blurred-borders"></div>
 				</div>
 			</section>
@@ -370,15 +383,21 @@
 	</body>
 
 	<script type="text/javascript">
-		let video = document.getElementById('video')
+		let video1 = document.getElementById('video1')
+		let video2 = document.getElementById('video2')
 
-		video.addEventListener(
+		video1.addEventListener(
 			'ended',
 			(element) => {
-				video.removeAttribute('poster')
-				video.src = './assets/video/landingLoop.webm'
-				video.play()
-				video.loop = true
+				video1.classList.add('invisible')
+
+				video2.classList.add('visible')
+				video2.play()
+				video2.loop = true
+
+				setTimeout( () => {
+					video1.style.display = 'none'
+				}, 1000)
 			},
 			{ once: true }
 		)
